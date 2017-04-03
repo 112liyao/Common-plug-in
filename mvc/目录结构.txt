@@ -1,0 +1,33 @@
+mvc 部署目录
+├─libs 配置文件目录
+│ ├─smarty
+│ ├─……
+├─module 模块目录
+│ ├─admin 后台模块目录
+│ ├─index 前台模块目录
+├─template 模版目录
+│ ├─admin 后台模版目录
+│ ├─index 前台模版目录
+├─static 静态文件
+│ ├─admin 后台
+│ │ ├─js
+│ │ ├─css
+│ │ │ ├─default.css
+│ │ │ ├─...
+│ │ ├─images
+│ ├─index 前台
+│ │ ├─js
+│ │ ├─css
+│ │ │ ├─default.css
+│ │ │ ├─...
+│ │ ├─images
+│ ├─font  使用到的字体文件
+│ ├─js   咱用的公共js库放这里   jquery等等
+│ ├─css  咱用的公共css库放这里  bootstrap等等
+│ ├─upload   上传的东西的文件夹
+│ ├─radios   精品课视频文件夹
+├─index.php 入口
+├─admin.php 入口
+
+
+"Microsoft Yahei",SimSun,Arial,Tahoma,sans-serif

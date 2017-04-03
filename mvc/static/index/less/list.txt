@@ -1,0 +1,319 @@
+body{
+  background:#f7f7f7;
+}
+
+/*中间内容 start*/
+.cyy-contentbox{
+  width:1200px;
+  padding:5px;
+  overflow:hidden;
+  margin:0 auto;
+}
+
+/*左边盒子 start*/
+.cyy-leftbox{
+  height:auto;
+  width:300px;
+  overflow:hidden;
+  float:left;
+
+  box-shadow:1px 1px 20px rgba(150,150,150,0.25);
+  -moz-box-shadow:1px 1px 20px rgba(150,150,150,0.25);
+  -webkit-box-shadow:1px 1px 20px rgba(150,150,150,0.25);
+  -o-box-shadow:1px 1px 20px rgba(150,150,150,0.25);
+  -ms-box-shadow:1px 1px 20px rgba(150,150,150,0.25);
+
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=rgba(150,150,150,0.2), Direction=45, Strength=20);/* IE6/7/8 */
+
+
+  .catlist{
+    width:100%;
+    border-top:4px solid #007fce;
+    height:auto;
+    overflow:hidden;
+    padding-bottom:13px;
+    background:#fff;
+
+    .caption,.catname{
+      width:280px;
+      margin:0 auto;
+      border-bottom:1px solid #c8c8c8;
+    }
+
+    /*标题 start*/
+    .caption{
+      height:92px;
+      color:#000;
+      text-align:center;
+
+      p{
+        padding-top:13px;
+        line-height:36px;
+        font-size:24px;
+      }
+
+      div{
+        line-height:30px;
+        font-size:20px;
+
+        /*英文标题左右两边的横线*/
+        span{
+          display:inline-block;
+          height:2px;
+          width:20px;
+          background:#6c6c6c;
+          margin:0 6px;
+          vertical-align:middle;
+        }
+
+      }
+
+    }
+    /*标题 end*/
+
+    /*文字分类列表 start*/
+    .catname{
+      height:56px;
+      text-align:center;
+      position:relative;
+
+      a{
+        color:#8e8e8e;
+        display:block;
+        height:100%;
+        width:100%;
+        line-height:56px;
+        font-size:18px;
+      }
+      a.now{  /*当前选中的分类*/
+
+        background:#f7f7f7;
+
+        &>i,&>b{
+          display:block;
+        }
+      }
+      i{/*右边蓝色矩形*/
+        display:none;
+        font-style:normal;
+        font-size:24px;
+        color:#fff;
+        font-family:simsun;
+        height:57px;
+        width:30px;
+        line-height:58px;
+        position:absolute;
+        right:0;
+        top:-1px;
+        background:#037dca;
+      }
+
+      b{ /*左边蓝色竖条*/
+        display:none;
+        height:57px;
+        width:4px;
+        background:#037dca;
+        position:absolute;
+        left:0;
+        top:-1px;
+      }
+    }
+
+    /*去除底部边框*/
+    .no_btm_border{
+      border-bottom:none;
+    }
+    /*文字分类列表 end*/
+
+    /*图像分类  start*/
+    .imgcatlist{
+      width:280px;
+      margin:0 auto;
+      padding-bottom:20px;
+      overflow:hidden;
+      background:#fff;
+
+      /*每个图像栏目  start*/
+      li{
+        width:100%;
+        height:auto;
+        overflow:hidden;
+        margin-bottom:15px;
+
+        /*图片盒子 start*/
+        .imgbox{
+          height:212px;
+          width:100%;
+          background: #ddd;
+          text-align:center;
+          margin-bottom:8px;
+
+          img {
+            height: 100%;
+          }
+
+        }
+        /*图片盒子 end*/
+
+        /*图片栏目文字标题 start*/
+        h4{
+          width:100%;
+          line-height:26px;
+          font-size:18px;
+          font-weight:normal;
+
+          a{
+            color:#000;
+          }
+
+        }
+        /*图片栏目文字标题 end*/
+
+        /*点击量和时间信息 start*/
+        .info{
+          height:22px;
+          line-height:22px;
+          color:#000;
+
+          span{
+            display:inline-block;
+            height:22px;
+            line-height:22px;
+            min-width:65px;
+            padding-right:15px;
+
+
+            i{
+              display:inline-block;
+              height:16px;
+              width:16px;
+              background-repeat: no-repeat;
+              background-position: center center;
+              margin-right:6px;
+              vertical-align:middle;
+            }
+
+          }
+
+          /*点赞量*/
+          .good{
+            i{
+              background-image:url(../images/icon_love.jpg);
+            }
+
+          }
+          /*时间*/
+          .time{
+            i{
+              background-image:url(../images/icon_clock.jpg);
+            }
+          }
+
+
+
+        }
+        /*点击量和时间信息 end*/
+
+
+      }
+      /*每个图像栏目  end*/
+
+    }
+
+    /*图像分类  end*/
+
+    /*教师信息 start*/
+    .teacher{
+      width:240px;
+      margin:0 auto;
+      border-bottom:9px;
+      background:#fff;
+
+      .imgbox{
+        width:100%;
+        height:195px;
+        margin:0 auto 9px;
+        text-align:center;
+        background:#ddd;
+
+        img{
+          height:100%;
+        }
+      }
+
+      h5{
+        line-height:26px;
+        height:26px;
+        text-align:center;
+        font-weight:normal;
+
+        b{
+          font-weight:normal;
+          color:#2479b0;
+        }
+
+      }
+
+
+    }
+    /*教师信息 end*/
+  }
+
+  /*信息检索搜索框  start */
+  .searchbox{
+    width:298px;
+    height:52px;
+    border:2px solid #047cca;
+    margin-bottom:20px;
+
+    .search{
+      padding-left:18px;
+      color:#c3c3c3;
+      line-height:52px;
+      height:52px;
+      width:220px;
+      border:none;
+    }
+
+    .search-btn{
+      height:52px;
+      width:48px;
+      float:right;
+      border:none;
+      background-image:url(../images/search_btn.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+  }
+  /*信息检索搜索框  end */
+
+}
+/*左边盒子 end*/
+/*右边盒子 start*/
+.cyy-rightbox{
+  width:879px;
+  min-height:600px;
+ /*border:1px solid transparent;*/
+  padding:1px;
+  float:right;
+  overflow:hidden;
+
+  box-shadow:1px 1px 20px rgba(150,150,150,0.25);
+  -moz-box-shadow:1px 1px 20px rgba(150,150,150,0.25);
+  -webkit-box-shadow:1px 1px 20px rgba(150,150,150,0.25);
+  -o-box-shadow:1px 1px 20px rgba(150,150,150,0.25);
+  -ms-box-shadow:1px 1px 20px rgba(150,150,150,0.25);
+
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=rgba(150,150,150,0.2), Direction=45, Strength=20);/* IE6/7/8 */
+
+  #iframe{
+    width:100%;
+    min-height:600px;
+  }
+
+
+}
+/*右边盒子 end*/
+
+/*中间内容 end*/
