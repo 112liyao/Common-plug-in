@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-02 19:48:20
+/* Smarty version 3.1.30, created on 2017-04-04 04:57:51
   from "C:\wamp\www\gongshang\template\admin\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58e13964d71565_08567322',
+  'unifunc' => 'content_58e30baf68d0d8_43058378',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '47ce97a207bd5cf5864ba0c21749d4267b7bf3db' => 
     array (
       0 => 'C:\\wamp\\www\\gongshang\\template\\admin\\index.html',
-      1 => 1491155299,
+      1 => 1491274669,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58e13964d71565_08567322 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58e30baf68d0d8_43058378 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,28 +80,50 @@ function content_58e13964d71565_08567322 (Smarty_Internal_Template $_smarty_tpl)
                         <i class="iconfont">&#xe729;</i>
                         <a href="javascript:;"><i class="iconfont">&#xe62d;</i>admin</a>
                         <ul class="son">
-                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>修改密码</a></li>
+                            <li><a href="index.php?m=admin&a=editauser" target="right"><i class="iconfont">&#xe724;</i>修改密码</a></li>
                             <li><a href="" target="right"><i class="iconfont">&#xe724;</i>所有管理员</a></li>
                         </ul>
                     </li>
                     <li>
+                        <i class="iconfont">&#xe612;</i>
+                        <a href="index.php?m=admin&a=deluser" target="right"><i class="iconfont">&#xe69b;</i>用户管理</a>
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe612;</i>
+                        <a href="index.php?m=admin&a=addcategory" target="right"><i class="iconfont">&#xe661;</i>分类管理</a>
+                    </li>
+                    <li>
                         <i class="iconfont">&#xe729;</i>
-                        <a href="javascript:;"><i class="iconfont">&#xe69b;</i>用户管理</a>
+                        <a href="javascript:;"><i class="iconfont">&#xe60b;</i>精品课程</a>
                         <ul class="son">
-                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>用户添加</a></li>
-                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>用户删除</a></li>
+                            <li><a href="index.php?m=admin&a=editauser" target="right"><i class="iconfont">&#xe724;</i>添加课程</a></li>
+                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>管理课程</a></li>
                         </ul>
                     </li>
                     <li>
                         <i class="iconfont">&#xe729;</i>
-                        <a href="javascript:;"><i class="iconfont">&#xe661;</i>分类管理</a>
+                        <a href="javascript:;"><i class="iconfont">&#xe63d;</i>学生工作</a>
                         <ul class="son">
-                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>添加分类</a></li>
-                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>管理分类</a></li>
+                            <li><a href="index.php?m=admin&a=editauser" target="right"><i class="iconfont">&#xe724;</i>添加工作</a></li>
+                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>管理工作</a></li>
                         </ul>
                     </li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        <i class="iconfont">&#xe729;</i>
+                        <a href="javascript:;"><i class="iconfont">&#xe63c;</i>学院新闻动态</a>
+                        <ul class="son">
+                            <li><a href="index.php?m=admin&a=editauser" target="right"><i class="iconfont">&#xe724;</i>添加新闻动态</a></li>
+                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>管理新闻动态</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe729;</i>
+                        <a href="javascript:;"><i class="iconfont">&#xe717;</i>学院公告</a>
+                        <ul class="son">
+                            <li><a href="index.php?m=admin&a=editauser" target="right"><i class="iconfont">&#xe724;</i>新增公告</a></li>
+                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>公告管理</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

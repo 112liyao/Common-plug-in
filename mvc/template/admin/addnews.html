@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script charset="utf-8" src="{JS_PATH}/kindeditor-4.1.7/kindeditor.js"></script>
+<script charset="utf-8" src="{JS_PATH}/kindeditor-4.1.7/lang/zh_CN.js"> </script>
+<script src="{JS_PATH}/jquery-min.js"></script>
+<script src="{JS_PATH}/jquery.validate.js"></script>
+
+<body>
+<form action="index.php?m=admin&f=art&a=addnewsInfo" method="post" id="form" >
+
+    <div class="form-group">
+        <label for="title">标题：</label>
+        <input type="text" name="title" id="title" autocomplete="off">
+    </div>
+    <div class="form-group">
+        <label for="etitle">英文标题：</label>
+        <input type="text" name="etitle" id="etitle" autocomplete="off">
+    </div>
+    <div class="form-group">
+        <label for="name">发布人（如果内容为空，默认为“山西工商学院”）：</label>
+        <input type="text" name="name" id="name" autocomplete="off">
+    </div>
+    <div class="form-group">
+        <label for="cid">分类：</label>
+        <select name="cid" id="cid">
+            <option value="0" selected>一级分类</option>
+            {$tree}
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="summary">摘要(如果内容为空，默认为标题)：</label>
+        <textarea name="summary" id="summary" cols="30" rows="10"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="editor_id">内容：</label>
+        <br/>
+        <textarea id="editor_id" name="editor_id" style="width:700px;height:300px;">
+        </textarea>
+    </div>
+    <input type="submit" value="提交">
+</form>
+</body>
+<script>
+    KindEditor.ready(function(K) {
+        window.editor = K.create('#editor_id');
+    });
+
+    $.validator.addMethod("etitle",function(value,element,params){
+            var etitle = /^[0-9a-zA-Z\s]*$/;
+            return this.optional(element)||(etitle.test(value));
+        },"请输入纯英文");
+
+    $("#form").validate({
+        rules:{
+            title:{
+                required:true
+            },
+            etitle:{
+                etitle:true,
+                maxlength:255
+            },
+            summary:{
+                maxlength:255
+            },
+            name:{
+                maxlength:50
+            }
+        },
+        messages:{
+            title:{
+                required:"请输入标题"
+            },
+            etitle:{
+                maxlength:"最多输入255个字符"
+            },
+            summary:{
+                maxlength:"最多输入255个字"
+            },
+            name:{
+                maxlength:"最多输入50个字"
+            }
+        }
+    })
+
+
+
+
+
+</script>
+</html>

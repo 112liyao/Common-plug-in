@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="{CSS_PATH}/bootstrap.min.css" />
+	<link rel="stylesheet" href="{ADMIN_PATH}/css/deluser.css" />
+	<script src="{JS_PATH}/jquery-min.js"></script>
+	<style>
+		table{
+			width: 800px;
+			margin: 0 auto;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		th{
+			background: #3E95E8;
+			height: 50px;
+			font-size: 16px;
+			color: #fff;
+		}
+		th,td{
+			text-align: center;
+		}
+		.del{
+			padding: 5px 10px;
+			border-radius: 5px;
+			background: #3E95E8;
+			color: #fff;
+		}
+		td a:hover{
+			text-decoration: none;
+			color: #fff;
+			box-shadow: 0 0 5px rgba(0,0,0,.5);
+		}
+	</style>
+</head>
+<body>
+	<div class="zmr_box">
+		<table class="table table-hover">
+			<thead>
+				<th>用户名</th>
+				<th>昵称</th>
+				<th>密码</th>
+				<th>注册时间</th>
+				<th>操作</th>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
+<script>
+	
+var all={$result};
+var str="";
+for(var i=0;i<all.length;i++){
+	str+="<tr>";
+		str+="<td>"+all[i]["uname"]+"</td>";
+		str+="<td>"+all[i]["unickname"]+"</td>";
+		str+="<td>"+all[i]["upass"]+"</td>";	
+		str+="<td>"+all[i]["udate"]+"</td>";		
+		str+="<td><a href='index.php?m=admin&&a=shanchuuser&&id="+all[i]["uid"]+"' class='del'>删除用户</a></td>";	
+	str+="</tr>";
+}
+$("tbody").append(str);
+
+
+
+</script>
