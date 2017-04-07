@@ -21,8 +21,8 @@
         }
         /*
          * total  数据总量
-         * 每页显示的条数  $pageNum
-         * 当前页码   current
+         * $pageNum 每页显示的条数
+         * current  当前页码
          * pageNums  页码的数量  向上取整ceil()
          * param 地址栏默认的参数
          *
@@ -36,6 +36,7 @@
             /*
              * 创建字符串 page 保存 '...pages='  ，方便后面构造路径
              * */
+
             $url=substr($_SERVER["REQUEST_URI"],0,strrpos($_SERVER["REQUEST_URI"],"?"));
             $request_url=substr($_SERVER["REQUEST_URI"],strrpos($_SERVER["REQUEST_URI"],"?"));
             $page=strrpos($request_url,"pages")?
@@ -43,7 +44,7 @@
                 :$request_url.'&pages=';
             $page=$url.$page;
             /*
-             * 分页  最小值 最大值 步进值
+             *  分页  最小值 最大值 步进值
              *  最大值 $start
              *  最小值 $end
              *  首页 startPage
@@ -55,12 +56,15 @@
             $str.="<a class='startPage' href=".$startPage.">首页</a>";
             // 页码
             $start=$this->current-3<0?0:$this->current-3;
+
             $end=$this->current+3>$this->pagesnub?$this->pagesnub:$this->current+3;
+
             for($i=$start;$i<$end;$i++){
+
                 if($i==$this->current){
-                    $str.="<a class='nowPage' href=".$page.$i.">".$i."</a>";
+                    $str.="<a class='nowPage' href=".$page.$i.">".($i+1)."</a>";
                 }else{
-                    $str.="<a href=".$page.$i.">".$i."</a>";
+                    $str.="<a href=".$page.$i.">".($i+1)."</a>";
                 }
             }
             // 尾页

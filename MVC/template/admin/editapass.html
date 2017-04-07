@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>修改密码</title>
+	<link rel="stylesheet" href="{CSS_PATH}/bootstrap.min.css" />
+	<link rel="stylesheet" href="{CSS_PATH}/../admin/css/addcategory.css" />
+	<script src="{JS_PATH}/jquery-min.js"></script>
+</head>
+<body>
+	<div class="zmr_box">
+		<table class="table table-striped">
+			<thead>
+				<th>旧密码</th>
+				<th>新密码</th>
+				<th>确认密码</th>
+				<th>操作</th>
+			</thead>
+			<tbody>		
+				<tr>
+					<td class='neirong01'>旧密码：<input type='password' id='oldapass' /></td>
+					<td class='neirong01'>新密码：<input type='password' id='newapass' /></td>
+					<td class='neirong01'>确认密码：<input type='password' id='querenapass' /></td>
+					<td><div class='tijiao' href=''>提交</div></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>	
+</body>
+</html>
+<script>
+//确认提交
+var aid={$aid};
+var jiance={$jiance};
+$("table").on("click",".tijiao",function(){
+	var oldapass=$("#oldapass").val()
+	var newapass=$("#newapass").val()
+	var querenapass=$("#querenapass").val()
+	if(jiance.test(newapass)&&newapass==querenapass){
+		location.href="index.php?m=admin&&a=editapassinfo&&aid="+aid+"&&oldapass="+oldapass+"&&newapass="+newapass;	
+	}else{
+	    alert("请输入6~10位以字母开头的密码");
+	}
+})
+</script>

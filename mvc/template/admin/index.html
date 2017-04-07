@@ -27,8 +27,8 @@
                 <b>计算机信息工程学院管理系统</b>
             </div>
             <div class="topright">
-                <span><i class="iconfont">&#xe6c5;</i>您好！admin,欢迎您登陆</span>
-                <a href=""><i class="iconfont">&#xe63b;</i></a>
+                <span><i class="iconfont">&#xe6c5;</i>您好！{$username},欢迎您登录</span>
+                <a href="index.php?m=admin&a=unLogin"><i class="iconfont">&#xe63b;</i></a>
             </div>
         </div>
     </div>
@@ -42,8 +42,11 @@
                         <i class="iconfont">&#xe729;</i>
                         <a href="javascript:;"><i class="iconfont">&#xe62d;</i>admin</a>
                         <ul class="son">
-                            <li><a href="index.php?m=admin&a=editauser" target="right"><i class="iconfont">&#xe724;</i>修改密码</a></li>
-                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>所有管理员</a></li>
+                            <li><a href="index.php?m=admin&a=editapass" target="right"><i class="iconfont">&#xe724;</i>修改密码</a></li>
+                            {if $atype==1}
+                            <li><a href="index.php?m=admin&a=guanliauser" target="right"><i class="iconfont">&#xe724;</i>所有管理员</a></li>
+                            {else}
+                            {/if}
                         </ul>
                     </li>
                     <li>
@@ -56,35 +59,31 @@
                     </li>
                     <li>
                         <i class="iconfont">&#xe729;</i>
+                        <a href="javascript:;"><i class="iconfont">&#xe63c;</i>学院内容</a>
+                        <ul class="son">
+                            <li><a href="index.php?m=admin&f=art&a=addnews" target="right"><i class="iconfont">&#xe724;</i>添加内容</a></li>
+                            <li><a href="index.php?m=admin&f=art&a=shownews" target="right"><i class="iconfont">&#xe724;</i>管理内容</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe729;</i>
                         <a href="javascript:;"><i class="iconfont">&#xe60b;</i>精品课程</a>
                         <ul class="son">
-                            <li><a href="index.php?m=admin&a=editauser" target="right"><i class="iconfont">&#xe724;</i>添加课程</a></li>
-                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>管理课程</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <i class="iconfont">&#xe729;</i>
-                        <a href="javascript:;"><i class="iconfont">&#xe63d;</i>学生工作</a>
-                        <ul class="son">
-                            <li><a href="index.php?m=admin&a=editauser" target="right"><i class="iconfont">&#xe724;</i>添加工作</a></li>
-                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>管理工作</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <i class="iconfont">&#xe729;</i>
-                        <a href="javascript:;"><i class="iconfont">&#xe63c;</i>学院新闻动态</a>
-                        <ul class="son">
-                            <li><a href="index.php?m=admin&a=editauser" target="right"><i class="iconfont">&#xe724;</i>添加新闻动态</a></li>
-                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>管理新闻动态</a></li>
+                            <li><a href="index.php?m=admin&f=art&a=addcourse" target="right"><i class="iconfont">&#xe724;</i>添加课程</a></li>
+                            <li><a href="index.php?m=admin&f=art&a=showcourse" target="right"><i class="iconfont">&#xe724;</i>管理课程</a></li>
                         </ul>
                     </li>
                     <li>
                         <i class="iconfont">&#xe729;</i>
                         <a href="javascript:;"><i class="iconfont">&#xe717;</i>学院公告</a>
                         <ul class="son">
-                            <li><a href="index.php?m=admin&a=editauser" target="right"><i class="iconfont">&#xe724;</i>新增公告</a></li>
-                            <li><a href="" target="right"><i class="iconfont">&#xe724;</i>公告管理</a></li>
+                            <li><a href="index.php?m=admin&f=art&a=addnotice" target="right"><i class="iconfont">&#xe724;</i>新增公告</a></li>
+                            <li><a href="index.php?m=admin&f=art&a=shownotice" target="right"><i class="iconfont">&#xe724;</i>公告管理</a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <i class="iconfont">&#xe612;</i>
+                        <a href="index.php?m=admin&a=pinglunguanli" target="right"><i class="iconfont">&#xe63c;</i>评论管理</a>
                     </li>
                 </ul>
             </div>

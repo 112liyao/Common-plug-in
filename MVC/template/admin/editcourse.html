@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>添加内容</title>
+    <title>修改精品课程</title>
 </head>
 <link rel="stylesheet" href="{CSS_PATH}/bootstrap.min.css">
 <script charset="utf-8" src="{JS_PATH}/kindeditor-4.1.7/kindeditor.js"></script>
@@ -10,38 +10,36 @@
 <script src="{JS_PATH}/jquery-min.js"></script>
 <script src="{JS_PATH}/jquery.validate.js"></script>
 <body>
-<form action="index.php?m=admin&f=art&a=addnewsInfo" method="post" id="form" >
+<form action="index.php?m=admin&f=art&a=editcourseInfo" method="post" id="form" >
     <div class="form-group">
-        <label for="title">内容标题：</label>
-        <input type="text" name="title" class="form-control" id="title" autocomplete="off">
+        <label for="title">课程名称：</label>
+        <input type="text" name="title" class="form-control" id="title" autocomplete="off" value={$course['title']} />
     </div>
     <div class="form-group">
-        <label for="etitle">内容英文标题：</label>
-        <input type="text" name="etitle" class="form-control" id="etitle" autocomplete="off">
-    </div>
-    <div class="form-group">
-        <label for="cid">内容分类：</label>
-        <select class="form-control" name="cid">
-            <option value="0">请选择</option>
-            {$tree}
-        </select>
+        <label for="etitle">课程英文名称：</label>
+        <input type="text" name="etitle" id="etitle" class="form-control" autocomplete="off" value={$course['etitle']}>
     </div>
     <div class="form-group">
         <label for="name">发布人：</label>
-        <input type="text" name="name" class="form-control" id="name" autocomplete="off">
+        <input type="text" name="name" id="name" class="form-control" autocomplete="off" value={$course['name']}>
     </div>
     <div class="form-group">
-        <label for="summary">摘要：</label>
-        <textarea name="summary" class="form-control" id="summary" cols="30" rows="4"></textarea>
+        <label for="label">课程分类（标签）：</label>
+        <input type="text" name="label" id="label" class="form-control" autocomplete="off" value={$course['label']}>
     </div>
     <div class="form-group">
-        <label for="editor_id">内容：</label>
-        <br/>
+        <label for="summary">课程摘要：</label>
+        <input type="text" class="form-control" value={$course['summary']}"" name="summary" id="summary">
+    </div>
+    <div class="form-group">
+        <label for="editor_id">视频和内容：</label>
         <textarea id="editor_id" name="editor_id" style="width:100%;height:300px;">
+            {$course['con']}
         </textarea>
     </div>
+    <input type="hidden" value="{$course['coid']}" name="coid">
     <button id="fat-btn" class="btn btn-primary" data-loading-text="Loading..."
-            type="submit"> 提交
+            type="submit">提交
     </button>
 </form>
 </body>
@@ -49,10 +47,12 @@
     KindEditor.ready(function(K) {
         window.editor = K.create('#editor_id');
     });
+
     $.validator.addMethod("etitle",function(value,element,params){
-            var etitle = /^[0-9a-zA-Z\s]*$/;
-            return this.optional(element)||(etitle.test(value));
-        },"请输入纯英文");
+        var etitle = /^[0-9a-zA-Z\s]*$/;
+        return this.optional(element)||(etitle.test(value));
+    },"请输入纯英文");
+
     $("#form").validate({
         rules:{
             title:{
@@ -84,5 +84,6 @@
             }
         }
     })
+
 </script>
 </html>

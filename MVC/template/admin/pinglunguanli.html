@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="{CSS_PATH}/bootstrap.min.css" />
+	<link rel="stylesheet" href="{CSS_PATH}/../admin/css/addcategory.css" />
+	<script src="{JS_PATH}/jquery-min.js"></script>
+</head>
+<style>
+	.sousuo{
+		height: 40px;
+		width: 380px;
+		border:2px solid #3e95e9;
+		overflow: hidden;
+		border-radius: 20px;
+		margin-bottom: 20px;
+		position: relative;
+	}
+	#search{
+		border: 0;width: 300px;
+		height: 40px;
+		box-sizing: border-box;
+		padding: 0 20px;
+		position: absolute;
+		top:-2px;
+		left: -2px;
+	}
+	#sousuo{
+		background: #3e95e9;
+		width: 80px;
+		height: 40px;
+		border: 0;
+		position: absolute;
+		right: 0;
+		color: #fff;
+		font-size: 16px;
+		top: -2px;
+		margin: 0;
+	}
+</style>
+<body>
+	<div class="zmr_box">
+		<form action="index.php?m=admin&&a=pinglunsousuo" method="post">
+			<div class="sousuo">
+				<input type="text" name="search" id="search">
+				<button id="sousuo" type="submit">搜索</button>
+			</div>
+		</form>
+		<table class="table table-striped">
+			<thead>
+				<th>留言内容</th>
+				<th>操作</th>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
+<script>
+var all1={$result1};
+var all2={$result2};
+var str="";
+for(var i=0;i<all1.length;i++){
+	str+="<tr>";
+		str+="<td>"+all1[i]["mcon"]+"</td>";		
+		str+="<td><a href='index.php?m=admin&&a=delpinglun&&biao=1&&mid="+all1[i]["mid"]+"' class='del'>删除评论</a></td>";	
+	str+="</tr>";
+}
+for(var i=0;i<all2.length;i++){
+	str+="<tr>";
+		str+="<td>"+all2[i]["mcon"]+"</td>";		
+		str+="<td><a href='index.php?m=admin&&a=delpinglun&&biao=2&&mid="+all2[i]["mid"]+"' class='del'>删除评论</a></td>";	
+	str+="</tr>";
+}
+$("tbody").append(str);
+</script>

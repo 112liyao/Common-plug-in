@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-03 13:49:18
+/* Smarty version 3.1.30, created on 2017-04-04 11:31:58
   from "C:\wamp\www\gongshang\template\admin\message.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58e236be5a0415_23548329',
+  'unifunc' => 'content_58e3680e595389_81476889',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '97a6a98b9fbd6156b4ca36e75fd2f96b0731455f' => 
     array (
       0 => 'C:\\wamp\\www\\gongshang\\template\\admin\\message.html',
-      1 => 1491220151,
+      1 => 1491290511,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58e236be5a0415_23548329 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58e3680e595389_81476889 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>提示信息</title>
 		<?php echo '<script'; ?>
  src="<?php echo JS_PATH;?>
 /jquery-min.js"><?php echo '</script'; ?>

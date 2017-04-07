@@ -19,7 +19,7 @@
          * */
         function checkLogin(){
             if(!($this->session->get("is_login")&&!empty(MVC))){
-                $url="index.php?m=admin&f=index&a=login";
+                $url="index.php?m=admin";
                 $message="请登陆";
                 $this->jump($url,$message);
                 return false;

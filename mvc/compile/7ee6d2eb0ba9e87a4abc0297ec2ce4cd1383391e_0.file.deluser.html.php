@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-04 04:03:33
+/* Smarty version 3.1.30, created on 2017-04-05 15:47:58
   from "C:\wamp\www\gongshang\template\admin\deluser.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58e2fef5e521e6_84937376',
+  'unifunc' => 'content_58e4f58e544928_50020988',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ee6d2eb0ba9e87a4abc0297ec2ce4cd1383391e' => 
     array (
       0 => 'C:\\wamp\\www\\gongshang\\template\\admin\\deluser.html',
-      1 => 1491271405,
+      1 => 1491400076,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,27 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58e2fef5e521e6_84937376 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58e4f58e544928_50020988 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Document</title>
+	<title>删除用户</title>
 	<link rel="stylesheet" href="<?php echo CSS_PATH;?>
 /bootstrap.min.css" />
-	<link rel="stylesheet" href="<?php echo ADMIN_PATH;?>
-/css/deluser.css" />
 	<?php echo '<script'; ?>
  src="<?php echo JS_PATH;?>
 /jquery-min.js"><?php echo '</script'; ?>
 >
 	<style>
+		.zmr_box{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;left: 0;right: 0;bottom: 0;
+			margin: auto;
+		}
 		table{
 			width: 800px;
 			margin: 0 auto;

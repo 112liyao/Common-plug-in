@@ -1,14 +1,51 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-04-05 13:58:18
+  from "C:\wamp\www\gongshang\template\admin\addnews.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_58e4dbda177422_27720965',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'a0bba4677c653447d47ff11ecdbdef6bb73e8160' => 
+    array (
+      0 => 'C:\\wamp\\www\\gongshang\\template\\admin\\addnews.html',
+      1 => 1491360953,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_58e4dbda177422_27720965 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>添加内容</title>
 </head>
-<link rel="stylesheet" href="{CSS_PATH}/bootstrap.min.css">
-<script charset="utf-8" src="{JS_PATH}/kindeditor-4.1.7/kindeditor.js"></script>
-<script charset="utf-8" src="{JS_PATH}/kindeditor-4.1.7/lang/zh_CN.js"> </script>
-<script src="{JS_PATH}/jquery-min.js"></script>
-<script src="{JS_PATH}/jquery.validate.js"></script>
+<link rel="stylesheet" href="<?php echo CSS_PATH;?>
+/bootstrap.min.css">
+<?php echo '<script'; ?>
+ charset="utf-8" src="<?php echo JS_PATH;?>
+/kindeditor-4.1.7/kindeditor.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ charset="utf-8" src="<?php echo JS_PATH;?>
+/kindeditor-4.1.7/lang/zh_CN.js"> <?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+/jquery-min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+/jquery.validate.js"><?php echo '</script'; ?>
+>
 <body>
 <form action="index.php?m=admin&f=art&a=addnewsInfo" method="post" id="form" >
     <div class="form-group">
@@ -23,7 +60,8 @@
         <label for="cid">内容分类：</label>
         <select class="form-control" name="cid">
             <option value="0">请选择</option>
-            {$tree}
+            <?php echo $_smarty_tpl->tpl_vars['tree']->value;?>
+
         </select>
     </div>
     <div class="form-group">
@@ -45,7 +83,8 @@
     </button>
 </form>
 </body>
-<script>
+<?php echo '<script'; ?>
+>
     KindEditor.ready(function(K) {
         window.editor = K.create('#editor_id');
     });
@@ -84,5 +123,7 @@
             }
         }
     })
-</script>
-</html>
+<?php echo '</script'; ?>
+>
+</html><?php }
+}

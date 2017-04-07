@@ -21,7 +21,7 @@
             //文字
             $this->createText();
             //干扰线
-            $this->createLine();
+//            $this->createLine();
             $out($this->img);
         }
         /*
@@ -29,7 +29,7 @@
          * */
         private function create(){
             $this->img=imagecreatetruecolor($this->width,$this->height);
-            $bgcolor=$this->randColor(128,255);
+            $bgcolor=$this->randColor(255,255,255,255);
             imagefill($this->img,0,0,$bgcolor);
         }
         public function getText(){

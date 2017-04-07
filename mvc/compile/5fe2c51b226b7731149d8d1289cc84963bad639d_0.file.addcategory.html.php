@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-04-04 04:05:14
+/* Smarty version 3.1.30, created on 2017-04-04 09:26:37
   from "C:\wamp\www\gongshang\template\admin\addcategory.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58e2ff5a51ada1_47282066',
+  'unifunc' => 'content_58e34aad8938f9_51643210',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5fe2c51b226b7731149d8d1289cc84963bad639d' => 
     array (
       0 => 'C:\\wamp\\www\\gongshang\\template\\admin\\addcategory.html',
-      1 => 1491271511,
+      1 => 1491290512,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58e2ff5a51ada1_47282066 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58e34aad8938f9_51643210 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Document</title>
+	<title>添加分类</title>
 	<link rel="stylesheet" href="<?php echo CSS_PATH;?>
 /bootstrap.min.css" />
 	<link rel="stylesheet" href="<?php echo ADMIN_PATH;?>

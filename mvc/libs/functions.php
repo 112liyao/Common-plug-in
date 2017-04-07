@@ -54,6 +54,35 @@
             }
         }
         /*
+          @param
+              $pid    父类别id  全部查写0
+              $flag   从第几级分类开始标识  全部查写0
+              $table  表名
+              $db     数据库名
+              $current     当前id ，讲当前id置为选中状态
+         */
+        //生成选中状态的下拉，出分类名
+        function treeCur($pid, $flag, $table, $db,$current=null){
+            //查询所有一级标题
+            $sql = "select * from $table where pid=" . $pid;
+            $result = $db->select($sql);
+            if($result==false){
+                return false;
+            };
+            $strflag=str_repeat("-",$flag);
+            $flag=$flag+1;
+            foreach($result as $key=>$row){
+                $cid = $row["cid"];
+                if($cid==$current){
+                    $this->str .= "<option value='$cid' selected='selected' >{$strflag}{$row["cname"]}</option>";
+                }else{
+                    $this->str .= "<option value='$cid' >{$strflag}{$row["cname"]}</option>";
+                }
+                //自调用
+                $this->tree($cid, $flag, $table, $db,$current);
+            }
+        }
+        /*
         @param
             $pid    父级别的id
             $flag   标识，区分级别
