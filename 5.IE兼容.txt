@@ -1,0 +1,74 @@
+一、IE6里面出现的双倍边距问题(左边与右边都有问题)
+
+   产生:盒子里面的子元素有浮动属性，调整边距时用margin-left，第一个子元素的边距会变双倍。
+
+   解决：
+    给第一个子元素加:
+     display:inline;
+     _margin_left:10px;
+
+二、IE6 .png24位格式的图片不支持
+   解决办法：通过js来实现
+   
+三、一段文字，在火狐字体显示红色，在ie8显示蓝色，在ie6里显示黄色(hank)
+
+  使用不用的标记符号来实现
+  color:blue\9;   IE6,7,8都支持
+  +color:yellow;  IE6,7支持
+  _color:#ccc;    IE6支持
+  *position:absolute;  IE6,8支持
+
+四、a标签包img时，会出现蓝色的边框 
+  img{border:none}
+
+五、透明度
+  opacity:0.8
+  filter:alpha(opacity=80)
+
+六、圆角不支持 border-radius:
+  用图片代替
+
+七、固定定位 不支持
+  选择器{
+     *position:absolute;
+     *top:expression(eval(document.documentElement.scrollTop+200));
+  }
+  *html{
+     background-image:url(bank:about);
+     background-attachment:absolute;
+  }
+
+八、盒子的高度不设置的情况下，在IE6下默认有12px-14px的高
+  解决：给盒子设置 font-size:0
+
+九、IE6对于支持inline-block;的问题
+ 解决需要两步：
+ 1. div{
+    width:200px;
+    height:200px;
+    background:red;
+    display:inline-block;
+  }
+ 2. div{
+    display:inline;
+  }
+
+十、解决IE6不支持最小宽度
+  div{  min-width: 333px;
+  width: expression_r_r( document.body.clientWidth < 334 ? "333px" : "auto" );
+  }
+  
+十一、块元素的margin:0 auto失效
+   在外套一个div,设置text-align:center
+
+  
+
+
+
+
+
+
+
+
+
+

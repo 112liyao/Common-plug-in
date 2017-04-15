@@ -1,0 +1,21 @@
+ECMAScript的全部关键字（*为第五版新增）：
+
+break　　do　　instanceof　　typeof　　case　　else　　new　　var　　catch　　finally　　return　　void　　continue　　for　　switch　　while　　　　　　　　debugger*　　  function　　this　　with　　　　default　　if　　throw　　delete　　in　　try　　
+
+ECMA-262中的全部保留字（第三版）：
+
+abstract　　enum　　int　　short　　boolean　　export　　interface　　static　　byte　　extends　　long　　super　　char　　final　　native　　class
+
+synchronized　　float　　package　　throws　　const　　goto　　private　　transient　　debugger　　implements　　protected　　volatile　　double　　
+
+import　　public
+
+保留字可能会作为再版的关键字，如第五版新增的debugger就是第三版的保留字。
+
+第五版中非严格模式下的保留字：
+
+class　　enum　　extends　　supper　　const　　export　　import
+
+严格模式下保留字：
+
+implements　　package　　public　　interface　　private　　static　　let　　protected　　yield
