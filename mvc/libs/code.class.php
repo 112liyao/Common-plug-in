@@ -1,6 +1,6 @@
 <?php
     class code{
-        private $letter="ACEFHKMNPQRSTWXY";  //字符池
+        private $letter="abc3def2ghi4gkm5npq6rs7tuv8wxy9zAB3CD4EF2GHG5KLM6NPQ7RST8UVW5XYZ";  //字符池
         private $letterNum=4;   //生成文字的数量
         public $letterUrl="../static/font/FZBSFW.TTF";
         public $width="150";    //生成图片的宽度
@@ -21,7 +21,7 @@
             //文字
             $this->createText();
             //干扰线
-//            $this->createLine();
+//          $this->createLine();
             $out($this->img);
         }
         /*
